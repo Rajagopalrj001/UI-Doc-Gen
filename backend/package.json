@@ -16,6 +16,7 @@
     "axios": "^1.8.3",
     "bcryptjs": "^3.0.2",
     "child_process": "^1.0.2",
+    "connect-timeout": "^1.9.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "esprima": "^4.0.1",

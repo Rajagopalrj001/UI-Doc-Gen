@@ -491,9 +491,12 @@ const glob = require("glob");
 const mongoose = require("mongoose"); // ✅ Mongoose added
 const bcrypt = require("bcryptjs"); // ✅ For password hashing
 const jwt = require("jsonwebtoken"); // ✅ For token generation
+const timeout = require("connect-timeout"); // ✅ Add this
+
 require("dotenv").config();
 
 const app = express();
+app.use(timeout('120s'));
 app.use(cors());
 app.use(express.json());
 
