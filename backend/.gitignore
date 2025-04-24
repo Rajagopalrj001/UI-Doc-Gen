@@ -1,0 +1,57 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Python dependencies
+__pycache__/
+*.pyc
+venv/
+env/
+*.pyo
+
+# Logs
+logs/
+*.log
+debug.log
+
+# Environment variables
+.env
+
+# Build artifacts
+dist/
+build/
+coverage/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Generated Documentation & Output
+output/
+generated/
+documentation.*
+*.pdf
+*.md
+*.html
+
+# Backend temporary and upload folders
+backend/temp_repo/
+backend/uploads/
+
+# VS Code settings
+.vscode/
+.history/
+
+# Cache and IDE files
+.idea/
+*.bak
+*.orig
+*.rej
+
+# Cloudflare & AI-generated images (if stored temporarily)
+images/generated/

@@ -1,0 +1,54 @@
+/* Nav.css */
+.nav-container {
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav-container ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-container li {
+  color: white;
+}
+
+.nav-container a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+ padding: 0;
+   display: flex;
+   gap: 10px;
+  }
+  
+  nav li {
+  margin-right: 10px;
+  }
+  
+  nav button {
+background-color: #ff4d4f;
+color: white;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 5px;
+  }
+  
+  nav button:hover {
+  background-color: #ff7875;
+  }
+  
