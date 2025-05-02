@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import "./Auth.css";
 
 function Signup() {
@@ -70,9 +71,9 @@ function Signup() {
           {/* Login Link */}
           <p className="text-center mt-3">
             Already have an account?{" "}
-            <a href="/login" className="text-danger text-decoration-none">
+            <Link to="/login" className="text-danger text-decoration-none">
               Login
-            </a>
+            </Link>
           </p>
         </form>
       </div>
