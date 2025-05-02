@@ -44,7 +44,7 @@ function ImageGeneration() {
         }
 
         try {
-            const response = await axios.post("http://localhost:6969/generate-image", { prompt });
+            const response = await axios.post("https://ui-doc-gen-backend.onrender.com/generate-image", { prompt });
             setImage(response.data.photo);
             setError("");
         } catch (err) {

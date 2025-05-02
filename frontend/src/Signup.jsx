@@ -15,7 +15,7 @@ function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:6969/signup", {
+        const response = await fetch("https://ui-doc-gen-backend.onrender.com/signup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),

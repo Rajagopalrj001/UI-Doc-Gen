@@ -21,7 +21,7 @@
 //         formData.append("file", file);
 
 //         try {
-//             const response = await axios.post("http://localhost:6969/upload", formData);
+//             const response = await axios.post("https://ui-doc-gen-backend.onrender.com/upload", formData);
 //             processResponse(response);
 //         } catch (err) {
 //             setError("Failed to process the file. Please upload a supported file.");
@@ -35,7 +35,7 @@
 //         }
 
 //         try {
-//             const response = await axios.post("http://localhost:6969/process-repo", { repoUrl });
+//             const response = await axios.post("https://ui-doc-gen-backend.onrender.com/process-repo", { repoUrl });
 //             processResponse(response);
 //         } catch (err) {
 //             setError("Failed to process the repository. Ensure the URL is correct and accessible.");
@@ -47,7 +47,7 @@
 //         setAiMarkdown(response.data.aiEnhancedMarkdown);
 //         setError("");
 
-//         const htmlResponse = await axios.post("http://localhost:6969/generate-html", {
+//         const htmlResponse = await axios.post("https://ui-doc-gen-backend.onrender.com/generate-html", {
 //             markdown: response.data.aiEnhancedMarkdown,
 //         });
 //         setHtml(htmlResponse.data.html);
@@ -150,7 +150,7 @@
 //         className="btn btn-outline-light me-2 btn-animate"
 //         onClick={() =>
 //           window.open(
-//             `http://localhost:6969/download-markdown?markdown=${encodeURIComponent(
+//             `https://ui-doc-gen-backend.onrender.com/download-markdown?markdown=${encodeURIComponent(
 //               aiMarkdown
 //             )}`
 //           )
@@ -162,7 +162,7 @@
 //         className="btn btn-outline-light me-2 btn-animate"
 //         onClick={() =>
 //           window.open(
-//             `http://localhost:6969/download-html?markdown=${encodeURIComponent(
+//             `https://ui-doc-gen-backend.onrender.com/download-html?markdown=${encodeURIComponent(
 //               aiMarkdown
 //             )}`
 //           )
@@ -174,7 +174,7 @@
 //         className="btn btn-outline-light btn-animate"
 //         onClick={() =>
 //           window.open(
-//             `http://localhost:6969/download-pdf?markdown=${encodeURIComponent(
+//             `https://ui-doc-gen-backend.onrender.com/download-pdf?markdown=${encodeURIComponent(
 //               aiMarkdown
 //             )}`
 //           )
@@ -220,7 +220,7 @@ function DocumentationGenerator() {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("http://localhost:6969/upload", formData);
+      const response = await axios.post("https://ui-doc-gen-backend.onrender.com/upload", formData);
       processResponse(response);
     } catch (err) {
       setError("Failed to process the file. Please upload a supported file.");
@@ -235,7 +235,7 @@ function DocumentationGenerator() {
     }
 
     try {
-      const response = await axios.post("http://localhost:6969/process-repo", { repoUrl });
+      const response = await axios.post("https://ui-doc-gen-backend.onrender.com/process-repo", { repoUrl });
       processResponse(response);
     } catch (err) {
       setError("Failed to process the repository. Ensure the URL is correct and accessible.");
@@ -248,7 +248,7 @@ function DocumentationGenerator() {
     setAiMarkdown(response.data.aiEnhancedMarkdown);
     setError("");
 
-    const htmlResponse = await axios.post("http://localhost:6969/generate-html", {
+    const htmlResponse = await axios.post("https://ui-doc-gen-backend.onrender.com/generate-html", {
       markdown: response.data.aiEnhancedMarkdown,
     });
     setHtml(htmlResponse.data.html);
@@ -261,7 +261,7 @@ function DocumentationGenerator() {
   const downloadMarkdown = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:6969/download-markdown",
+        "https://ui-doc-gen-backend.onrender.com/download-markdown",
         { markdown: markdownData },
         { responseType: "blob" }
       );
@@ -275,7 +275,7 @@ function DocumentationGenerator() {
   const downloadHTML = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:6969/download-html",
+        "https://ui-doc-gen-backend.onrender.com/download-html",
         { markdown: markdownData },
         { responseType: "blob" }
       );
@@ -289,7 +289,7 @@ function DocumentationGenerator() {
   const downloadPDF = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:6969/download-pdf",
+        "https://ui-doc-gen-backend.onrender.com/download-pdf",
         { markdown: markdownData },
         { responseType: "blob" }
       );
